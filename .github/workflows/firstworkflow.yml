@@ -14,8 +14,13 @@ jobs:
          echo "My first Github Actions Job"
          ls -lrta
          cat README.md
+     - name: install cowsay package
+       run: sudo apt install cowsay -y
      - name: Generate ASCII Artwork
        run: cowsay -f dragon "Run for cover, i am DRAGON..RAWR" > dragon.txt
+     - name: list of dragon.txt
+       run: cat dragon.txt
+
 
  #    - name: List files
  #     run: ls 
